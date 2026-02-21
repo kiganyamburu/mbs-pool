@@ -1,44 +1,42 @@
 # MBS Pool Analysis
 
-Tools for analyzing Mortgage-Backed Securities (MBS) pool data, specifically Fannie Mae MBS pools.
+Real Estate Capital Market Analysis tools for Spring 2026 coursework.
 
 ## Overview
 
-This project provides Python scripts to:
-
-- Extract and analyze MBS pool paydown history from Excel files
-- Compare pool balances with underlying collateral
-- Generate charts and visualizations for projected cashflows across interest rate scenarios
-- Create formatted Word documents with analysis results
-- Fetch and visualize FRED (Federal Reserve Economic Data) for economic context
+This project contains Python scripts for analyzing Mortgage-Backed Securities (MBS) and solving real estate finance problems.
 
 ## Scripts
 
-| Script                 | Description                                                                                 |
-| ---------------------- | ------------------------------------------------------------------------------------------- |
-| `analyze_mbs.py`       | Compares MBS Pool balance (Tab #2) vs Collateral balance (Tab #3) from paydown history data |
-| `generate_chart.py`    | Creates projected cashflow charts across rate scenarios (-300 to +300 MED) with WAL values  |
-| `create_fred_chart.py` | Generates Average Hourly Earnings (AHE) trend charts using FRED data                        |
-| `create_fred_excel.py` | Exports FRED AHE data to Excel format                                                       |
-| `convert_to_word.py`   | Converts analysis output to Word document format                                            |
-| `create_final_doc.py`  | Generates final formatted documentation                                                     |
+| Script                  | Purpose                                                            |
+| ----------------------- | ------------------------------------------------------------------ |
+| `analyze_mbs.py`        | Compares MBS pool balances vs collateral balances from Excel data  |
+| `solve_midterm.py`      | Calculates mortgage balances, payments, and yields                 |
+| `create_fred_chart.py`  | Generates charts from FRED economic data (Average Hourly Earnings) |
+| `create_fred_excel.py`  | Exports FRED data to Excel                                         |
+| `create_q3_chart.py`    | Creates Q3 cashflow/payment charts                                 |
+| `create_q6_chart.py`    | Creates Q6 price charts                                            |
+| `generate_chart.py`     | General chart generation utility                                   |
+| `convert_md_to_docx.py` | Converts Markdown files to Word documents                          |
+| `convert_to_word.py`    | Document conversion utility                                        |
+| `create_final_doc.py`   | Generates final document outputs                                   |
 
 ## Data Files
 
-| File                                                  | Description                                               |
-| ----------------------------------------------------- | --------------------------------------------------------- |
-| `Sample MBS actual paydown FN_BJ97911_MTGE PDI .xlsx` | Fannie Mae pool paydown and collateral history            |
-| `Sample MBS Projected Cashflow.xlsx`                  | Projected cashflows under various interest rate scenarios |
-| `FRED_AHE_Analysis.xlsx`                              | Exported FRED Average Hourly Earnings data                |
-| `FRED_AHE_Chart.png`                                  | Generated AHE trend visualization                         |
-| `Q3-3_Cashflow_Chart.png`                             | Projected cashflow chart output                           |
+- `Sample MBS actual paydown FN_BJ97911_MTGE PDI .xlsx` - MBS paydown history
+- `Sample MBS Projected Cashflow.xlsx` - Projected cashflow data
+- `FRED_AHE_Analysis.xlsx` - Average Hourly Earnings analysis
+- `Exam1_2026S.xlsx` - Exam data
 
 ## Requirements
 
-- Python 3.x
-- openpyxl (Excel file handling)
-- matplotlib (charting and visualization)
-- python-docx (Word document generation)
+```
+numpy
+numpy-financial
+openpyxl
+matplotlib
+python-docx
+```
 
 ## Usage
 
@@ -46,18 +44,9 @@ This project provides Python scripts to:
 # Analyze MBS pool data
 python analyze_mbs.py
 
-# Generate projected cashflow chart
-python generate_chart.py
+# Solve midterm problems
+python solve_midterm.py
 
 # Generate FRED chart
 python create_fred_chart.py
-
-# Create Word document
-python create_final_doc.py
 ```
-
-## Related Resources
-
-- [Fannie Mae PoolTalk](https://www.pooltalk.fanniemae.com) - Look up MBS pool details by CUSIP
-- [FRED](https://fred.stlouisfed.org) - Federal Reserve Economic Data
-  +1 and +2 years where did you get that data like estimate for sales, revenue link
