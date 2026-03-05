@@ -187,25 +187,25 @@ $$WAL = \frac{19.62 \times 200,000 + 4.84 \times 100,000}{200,000 + 100,000} = \
 
 ## Question 6: MBS Risk and Return Measures (20 points)
 
-_Reference: CUSIP 314M7GU9 as of 1/30/2026_
+_Reference: CUSIP 314M7GU9 as of 1/30/2026, Coupon 5%, WAC 5.83_
 
 ### Question 6-1: Price vs Curve Shift Chart (5 points)
 
-Using data from Chart 6-2 (base price = 100/par), the chart displays MBS price sensitivity to parallel interest rate shifts:
+Using actual data from Chart 6-2 (base price = 100 at par):
 
 ![Q6-1 Price vs Curve Shift Chart](Q6_1_Price_Chart.png)
 
-**Chart Analysis:**
+**Chart 6-2 Price Data:**
 
-| Curve Shift (bps) | MBS Price | Change from Par |
-| ----------------- | --------- | --------------- |
-| -300              | 103.5     | +3.5%           |
-| -200              | 102.8     | +2.8%           |
-| -100              | 101.7     | +1.7%           |
-| 0                 | 100.0     | 0%              |
-| +100              | 97.2      | -2.8%           |
-| +200              | 94.8      | -5.2%           |
-| +300              | 92.5      | -7.5%           |
+| Curve Shift (bps) | Price   | Change from Par |
+| ----------------- | ------- | --------------- |
+| -300              | 110.92  | +10.92%         |
+| -200              | 108.48  | +8.48%          |
+| -100              | 105.22  | +5.22%          |
+| 0                 | 100.00  | Base            |
+| +100              | 93.89   | -6.11%          |
+| +200              | 87.64   | -12.36%         |
+| +300              | 81.49   | -18.51%         |
 
 **Key Observations:**
 
@@ -216,12 +216,23 @@ Using data from Chart 6-2 (base price = 100/par), the chart displays MBS price s
 
 ### Question 6-2: Contraction and Extension Risk Analysis (5 points)
 
+**Chart 6-2 Risk Measures Across Curve Shifts:**
+
+| Measure      | -300 bps | -200 bps | -100 bps | 0 bps  | +100 bps | +200 bps | +300 bps |
+| ------------ | -------- | -------- | -------- | ------ | -------- | -------- | -------- |
+| **OAD**      | 2.04     | 2.37     | 4.06     | 5.87   | 6.64     | 7.11     | 7.41     |
+| **OAC**      | -0.51    | -0.55    | -2.36    | -0.87  | -0.16    | 0.17     | 0.44     |
+| **WAL**      | 3.61     | 4.71     | 6.72     | 8.50   | 9.63     | 10.50    | 11.28    |
+| **Life CPR** | 22.91%   | 17.43%   | 11.46%   | 8.14%  | 6.54%    | 5.49%    | 4.65%    |
+
+**Analysis:**
+
 | Measure      | When Rates FALL (Contraction Risk)                        | When Rates RISE (Extension Risk)                   |
 | ------------ | --------------------------------------------------------- | -------------------------------------------------- |
-| **OAD**      | Decreases (prepayments accelerate, shorter expected life) | Increases (prepayments slow, longer expected life) |
-| **OAC**      | More negative (price appreciation capped by prepayments)  | Less negative or positive (price decline slows)    |
-| **WAL**      | Decreases (principal returns faster)                      | Increases (principal returns slower)               |
-| **Life CPR** | Increases (more refinancing activity)                     | Decreases (less refinancing activity)              |
+| **OAD**      | Decreases sharply (5.87 → 2.04) as prepayments accelerate | Increases (5.87 → 7.41) as prepayments slow        |
+| **OAC**      | Highly negative at -100bp (-2.36), showing maximum negative convexity | Becomes positive (+0.44 at +300bp)    |
+| **WAL**      | Decreases (8.50 → 3.61 years) - principal returns faster  | Increases (8.50 → 11.28 years) - principal extends |
+| **Life CPR** | Increases dramatically (8.14% → 22.91%) - refinancing boom | Decreases (8.14% → 4.65%) - prepayments slow       |
 
 **Contraction Risk:** When rates fall, borrowers refinance, returning principal to investors who must reinvest at lower rates. The MBS "contracts" (shortens in duration) precisely when you want longer duration exposure.
 
