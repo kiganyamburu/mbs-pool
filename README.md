@@ -61,12 +61,3 @@ python create_final_doc.py
 - [Fannie Mae PoolTalk](https://www.pooltalk.fanniemae.com) - Look up MBS pool details by CUSIP
 - [FRED](https://fred.stlouisfed.org) - Federal Reserve Economic Data
   +1 and +2 years where did you get that data like estimate for sales, revenue link
-
-+1 and +2 years where did you get that data like estimate for sales, revenue link
-+1 and +2 years where did you get that data like estimate for sales, revenue link
-+1 and +2 years where did you get that data like estimate for sales, revenue link
-+1 and +2 years where did you get that data like estimate for sales, revenue link
-+1 and +2 years where did you get that data like estimate for sales, revenue link
-+1 and +2 years where did you get that data like estimate for sales, revenue link
-+1 and +2 years where did you get that data like estimate for sales, revenue link
-+1 and +2 years where did you get that data like estimate for sales, revenue link
